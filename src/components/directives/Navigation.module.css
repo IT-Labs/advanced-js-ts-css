@@ -1,0 +1,90 @@
+.header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* attribute selector (other ex. input[type="text"]) */
+[class*="linksWrapper"] {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* selects all <a> that are the children of a <div class=header> */
+.header > a {
+    text-decoration: none;
+    border: 1px solid green;
+    background-color: aliceblue;
+    border-radius: 3px;
+    margin-top: 4px !important;
+}
+
+/* + select an element that is directly after another specific element. */
+/* ::after is used to insert some content after the content of an element. */
+.active + a > .linksWrapper::after {
+    content: "\00a0- This is next";
+    color: dodgerblue;
+}
+
+/* selects all elements that are next siblings of a specified element. */
+.active ~ a {
+    border: 1px solid black;
+    background-color: white;
+}
+
+/* on link hover show play button */
+a:hover .play {
+    visibility: visible;
+    opacity: 1;
+}
+
+.active {
+    text-decoration: underline !important;
+    background-color: white !important;
+}
+
+.play {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../../assets/icons/play2.svg) no-repeat;
+    background-size: auto 50%;
+    background-position: center;
+    background-color: rgba(0,0,0,.2);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 150ms ease-in-out;
+    -moz-transition: opacity 150ms ease-in-out;
+    -ms-transition: opacity 150ms ease-in-out;
+    -o-transition: opacity 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out;
+    -webkit-transition: -webkit-transform 150ms ease-in-out;
+    -moz-transition: -moz-transform 150ms ease-in-out;
+    -o-transition: -o-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+}
+
+.completed {
+    position: absolute;
+    top: 5px;
+    right: -6px;
+    padding: 4px 6px;
+    background: greenyellow;
+    font-size: 0.6vw;
+}
+
+.completed:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 0;
+    border-color: greenyellow transparent transparent transparent;
+}

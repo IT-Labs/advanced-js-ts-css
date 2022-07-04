@@ -1,0 +1,67 @@
+.default-div {
+  background-color: coral;
+  /* height: 50px;
+  width: 300px; */
+}
+
+.span1 {
+  background-color: cornflowerblue;
+  width: 300px;
+  /* width and height are ignored for display: inline */
+}
+
+.span2 {
+  background-color: khaki;
+  height: 50px;
+  /* width and height are ignored for display: inline */
+}
+
+.span3 {
+  background-color: aqua;
+  display: inline-block;
+  height: 50px;
+  width: 300px;
+}
+
+.spanNone {
+  display: none;
+  background-color: yellow;
+}
+
+.flex-container{
+  border: 1px solid gray;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: azure;
+  display: flex;
+  justify-content: space-around; /* Aligns flex items along the main axis of the current line of the flex container. */
+  align-items: flex-start; /* Aligns flex items along the cross axis of the current line of the flex container. */
+}
+
+.flex-item{
+  border: 1px solid gray;
+  background-color: white;
+  width: 200px;
+  text-align: center;
+}
+
+.first-div{
+  min-height: 50px;
+  /* align-self: center;  */
+  /* align-self allows the default alignment along the cross axis to be overridden for individual flex items. */
+  /* flex: 1; */
+  /* The flex property is a shorthand property for: flex-grow, flex-shrink, flex-basis */
+}
+
+.second-div{
+  min-height: 80px;  
+}
+
+.third-div{
+  min-height: 100px;  
+}
+
+.flex-container-vertical{
+  flex-direction: column;
+  height: 400px;
+}

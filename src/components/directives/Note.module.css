@@ -1,0 +1,23 @@
+.container{
+    border: 1px solid gray;
+    background-color: aliceblue;
+    border-radius: 3px;
+    /* padding: 10px; */
+    min-height: 150px;
+    position: relative;
+}
+
+.header{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    background-color: lightblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.content{
+    padding: 10px;
+}
