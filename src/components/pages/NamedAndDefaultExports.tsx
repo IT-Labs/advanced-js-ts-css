@@ -1,6 +1,7 @@
 import React from "react";
 import Note from "../directives/Note";
-import Content from "../../models/Content";
+import Content from "../../models/Content"; // Default import
+// import { NoteModel } from "../../models/Content" // Named import 
 
 const NamedAndDefaultExports = () => {
 

@@ -15,8 +15,8 @@
 .staticDiv{
     background-color: aqua;
     padding: 20px;
-    top: 0px;
-    right: 0px;
+    top: 10px;
+    left: 10px;
     /* top, bottom, left and right are ignored for the default position: static */
 }
 
@@ -24,8 +24,8 @@
     position: relative;
     background-color: coral;
     padding: 20px;
-    top: 10px;
-    left: 10px;
+    /* top: 10px;
+    left: 10px; */
     /* top, bottom, left and right change the position relatively to the position normally it would be (as static) */
 }
 

@@ -38,6 +38,11 @@
   align-items: flex-start; /* Aligns flex items along the cross axis of the current line of the flex container. */
 }
 
+.flex-container-vertical{
+  flex-direction: column;
+  height: 400px;
+}
+
 .flex-item{
   border: 1px solid gray;
   background-color: white;
@@ -49,19 +54,19 @@
   min-height: 50px;
   /* align-self: center;  */
   /* align-self allows the default alignment along the cross axis to be overridden for individual flex items. */
-  /* flex: 1; */
+  /* flex: 1 0 200px; */
   /* The flex property is a shorthand property for: flex-grow, flex-shrink, flex-basis */
+  /* flex-shrink: 0; */
 }
 
 .second-div{
   min-height: 80px;  
+  /* flex-grow: 2;
+  flex-basis: 0; */
 }
 
 .third-div{
   min-height: 100px;  
-}
-
-.flex-container-vertical{
-  flex-direction: column;
-  height: 400px;
+  /* flex-grow: 1;
+  flex-basis: 0; */
 }

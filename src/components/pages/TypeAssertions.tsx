@@ -6,15 +6,18 @@ const TypeAssertions = () => {
 
   const notes: Array<Content> = [
     {key: 0, question: 'What is TypeScript assertion?', answer: 'A mechanism which tells the compiler about the type of a variable.'},
-    {key: 1, question: 'How we do it?', notes: [
+    {key: 1, question: 'Note', answer: "Type assertion does not change the type of the variable, it is used to inform the TypeScript compiler about the type of the variable so we can access the intellisense."},
+    {key: 2, question: 'How we do it?', notes: [
       {key: 0, content: '<type>someVar'}, {key: 1, content: 'someVar as type'}
     ]},
-    {key: 2, question: 'TypeScript assertion and React JSX', answer: "only the 'as' syntax is allowed, because JSX is emendable in XML like a syntax. And since XML uses angular brackets, it creates a conflict while using type assertions with angular brackets in JSX."}
+    {key: 3, question: 'TypeScript assertion and React JSX', answer: "Only the 'as' syntax is allowed, because JSX is emendable in XML like a syntax. And since XML uses angular brackets, it creates a conflict while using type assertions with angular brackets in JSX."},
   ]
 
-  let someNumber;
-  someNumber = '12345';
+  let someNumber: any;
+  someNumber = "12345";
   let numberOfChars = (someNumber as string).length;
+  // type assertion does not change the type of the variable, 
+  // it is used to inform the TypeScript compiler about the type of the variable so we can access the intellisense.
 
   // template literals syntax: `some text ${expression} other text`
   console.log(`Number of chars in ${someNumber} is ${numberOfChars}`);

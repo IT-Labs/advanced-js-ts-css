@@ -12,18 +12,19 @@ const VarLetConst = () => {
 
   const varIteration = useCallback(() => {
     for (var i = 0; i <=3; i++){
-      console.log('var ', i);
+      console.log('var: ', i);
     }
     // variables declared with var keyword are are function-scoped.
-    console.log('var ', i);
+    console.log('var outside of block: ', i);
   },[]);
-  
+
   const letIteration = useCallback(() => {
+    // let i: number;
     for (let i = 0; i <=3; i++){
-      console.log('let', i);
+      console.log('let: ', i);
     }
     // variables declared with let keyword are are block-scoped.
-    // console.log(i);
+    // console.log('let outside of block: ', i);
   },[]);
 
   // 'const' declarations must be initialized.

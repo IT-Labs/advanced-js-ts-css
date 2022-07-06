@@ -5,7 +5,7 @@ import Content from "../../models/Content";
 const SpreadRestDestructuring = () => {
 
   const notes: Array<Content> = [
-    {key: 0, question: 'Spread operator', answer: "Copy all or part of an existing array or object into another array or object"},
+    {key: 0, question: 'Spread operator', answer: "Copy an existing array or object into another array or object"},
     {key: 1, question: 'Rest operator', answer: "Merge a list of function arguments into an array"},
     {key: 2, question: 'Destructuring', answer: "Extract array elements or object properties and store them in variables"},
   ]
@@ -14,7 +14,7 @@ const SpreadRestDestructuring = () => {
   const numbersFromSixToTen = useMemo(() => [6, 7 ,8 , 9, 10],[]);
  
   // rest operator
-  let calculateSumOfNumbers = (...args: number[]) => {
+  const calculateSumOfNumbers = (...args: number[]) => {
     let result = 0;
     args.forEach((number) => {
       result += number;
@@ -34,11 +34,11 @@ const SpreadRestDestructuring = () => {
 
     // Array Destructuring
     let [one, ,three, four] = numbersFromOneToFive;
-    console.log('one', one);
-    console.log('three', three);
-    console.log('four', four);
+    console.log('one value:', one);
+    console.log('three value:', three);
+    console.log('four value:', four);
     
-    // Object destructuring example is in Note.jsx [const {header, content, notes} = props]
+    // Object destructuring example is in Note.tsx [const {header, content, notes} = props]
   },[numbersFromOneToFive, numbersFromSixToTen])
 
   return (

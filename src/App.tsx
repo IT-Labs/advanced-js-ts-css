@@ -12,6 +12,7 @@ import AccessingObjectProperties from "./components/pages/AccessingObjectPropert
 import VariableTypes from "./components/pages/VariableTypes";
 import Arrays from "./components/pages/ArrayMethods";
 import SpreadRestDestructuring from "./components/pages/SpreadRestDestructuring";
+import ShallowDeepCopy from "./components/pages/ShallowDeepCopy";
 import NamedAndDefaultExports from "./components/pages/NamedAndDefaultExports";
 import TypeScriptIntro from "./components/pages/TypeScriptIntro";
 import TypeInference from "./components/pages/TypeInference";
@@ -43,6 +44,7 @@ function App() {
                   <Route path="/variable-types" element={<VariableTypes />} />
                   <Route path="/arrays" element={<Arrays />} />
                   <Route path="/spread-rest-destructuring" element={<SpreadRestDestructuring />} />
+                  <Route path="/shallow-deep-copy" element={<ShallowDeepCopy />} />
                   <Route path="/named-and-default-exports" element={<NamedAndDefaultExports />} />
                   <Route path="/type-script-intro" element={<TypeScriptIntro />} />
                   <Route path="/type-inference" element={<TypeInference />} />

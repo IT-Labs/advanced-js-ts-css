@@ -9,16 +9,25 @@ const Generics = () => {
     {key: 1, question: 'Why do we need?', answer: 'Generics provides type safety and flexibility.'}
   ]
 
-  let someNumber = 5;
-
-  const constructArray = <T,>(num1: T, num2: T): T[] => {
-    let ArrayOfT = [num1, num2];
+  const constructArrayFromTwoElements = <T,>(elem1: T, elem2: T): T[] => {
+    let ArrayOfT = [elem1, elem2];
     return ArrayOfT
   }
 
+  // rest operator
+  const constructArray = <T,>(...args: T[]): T[] => {
+    let ArrayOfT:T[] = [];
+    args.forEach((element) => {
+      ArrayOfT.push(element);
+    })
+    return ArrayOfT;
+  }
+
   useEffect(() => {
-    console.log('String array: ', constructArray('someNumber', '5'));
-  },[someNumber]);
+    console.log('String array: ', constructArrayFromTwoElements('someNumber', '5'));
+    console.log('Numbers array: ', constructArrayFromTwoElements(1, 5));
+    console.log('Numbers array: ', constructArray(1, 5, 7, 9, 11, 15));
+  },[]);
 
   return (
     <React.Fragment>

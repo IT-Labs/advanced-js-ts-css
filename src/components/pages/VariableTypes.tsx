@@ -16,21 +16,23 @@ const VariableTypes = () => {
     {key: 4, question: 'Reference Types', notes: [
       {key: 0, content: 'Object'}, {key: 1, content: 'Array'}, {key: 2, content: 'Function'}
     ]},
+    {key: 5, question: 'Reference Types', answer: "Object value is stored in memory and we store a reference (pointer) to that place in memory in our variables."},
+    {key: 6, question: 'Copying Reference Types', answer: "If you reassign them you are copying the pointer not the value."},
   ]
 
-  let primitiveVar = 'Primitive Var';
-  let referenceVar = {id: 0, name: 'referenceVar'};
+  let primitiveA = 'Text A';
+  let referenceA = {id: 0, name: 'Text A'};
 
   useEffect(() => {
-    let secondPrimitiveVar = primitiveVar;
-    secondPrimitiveVar = 'Second Primitive Var';
-    console.log('primitiveVar', primitiveVar);
-    console.log('secondPrimitiveVar', secondPrimitiveVar);
+    let primitiveB = primitiveA;
+    primitiveB = 'Text B';
+    console.log('primitiveA value:', primitiveA);
+    console.log('primitiveB value:', primitiveB);
 
-    let secondReferenceVar = referenceVar;
-    secondReferenceVar.name = 'Second Reference Var';
-    console.log('referenceVar', referenceVar);
-    console.log('secondReferenceVar', secondReferenceVar);
+    let referenceB = referenceA;
+    referenceB.name = 'Text B';
+    console.log('referenceA value:', referenceA);
+    console.log('referenceB value:', referenceB);
   })
 
   return (

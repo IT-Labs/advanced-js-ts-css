@@ -1,6 +1,7 @@
 import React from "react";
 import Note from "../directives/Note";
 import Content from "../../models/Content";
+import * as PersonData from "../../models/person.json";
 
 const AccessingObjectProperties = () => {
 
@@ -14,12 +15,18 @@ const AccessingObjectProperties = () => {
     {key: 6, question: 'Specific cases 3', answer: "Dot notation cannot be used with property that contain dot (json response could contain property 'foo.something')."},
   ]
 
-  const header = 'question';
+  
+  const person = PersonData;
+  const address = "1address"
+  console.log(person["name.surname"]);
+  console.log(person[address]);
 
+  const contentAnswer = 'answer';
+  
   return (
     <React.Fragment>
       {notes.map(note => 
-        <Note key={note['key']} header={note[header]} content={note.answer} notes={note.notes}/>
+        <Note key={note.key} header={note['question']} content={note[contentAnswer]} notes={note.notes}/>
       )}
     </React.Fragment>
   );

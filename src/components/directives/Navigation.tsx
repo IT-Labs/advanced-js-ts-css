@@ -1,5 +1,5 @@
 import Stack from '@mui/material/Stack';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import classes from './Navigation.module.css';
 import { useState } from 'react';
 
@@ -12,20 +12,23 @@ export default function Navigation() {
     {key: 3, link: '/variable-types', name: 'Variable types'},
     {key: 4, link: '/arrays', name: 'Arrays'},
     {key: 5, link: '/spread-rest-destructuring', name: 'Spread Rest Destructuring'},
-    {key: 6, link: '/named-and-default-exports', name: 'Named and Default Export'},
-    {key: 7, link: '/type-script-intro', name: 'TypeScript Intro'},
-    {key: 8, link: '/type-inference', name: 'Type Inference'},
-    {key: 9, link: '/type-assertions', name: 'Type Assertions'},
-    {key: 10, link: '/union-types', name: 'Union Types'},
-    {key: 11, link: '/generics', name: 'Generics'},
-    {key: 12, link: '/css-selectors', name: 'CSS Selectors'},
-    {key: 13, link: '/css-position', name: 'CSS Position'},
-    {key: 14, link: '/css-position-examples', name: 'CSS Position Examples'},
-    {key: 15, link: '/css-display', name: 'CSS Display'},
-    {key: 16, link: '/css-display-examples', name: 'CSS Display Examples'},
+    {key: 6, link: '/shallow-deep-copy', name: 'Shallow and Deep copy'},
+    {key: 7, link: '/named-and-default-exports', name: 'Named and Default Export'},
+    {key: 8, link: '/type-script-intro', name: 'TypeScript Intro'},
+    {key: 9, link: '/type-inference', name: 'Type Inference'},
+    {key: 10, link: '/type-assertions', name: 'Type Assertions'},
+    {key: 11, link: '/union-types', name: 'Union Types'},
+    {key: 12, link: '/generics', name: 'Generics'},
+    {key: 13, link: '/css-selectors', name: 'CSS Selectors'},
+    {key: 14, link: '/css-position', name: 'CSS Position'},
+    {key: 15, link: '/css-position-examples', name: 'CSS Position Examples'},
+    {key: 16, link: '/css-display', name: 'CSS Display'},
+    {key: 17, link: '/css-display-examples', name: 'CSS Display Examples'},
   ];
 
-  const [activeLink, setActiveLink] = useState(0);
+  const { pathname } = useLocation();
+  let currentLink = navLinks.find(o => o.link === pathname);
+  const [activeLink, setActiveLink] = useState(currentLink?.key ? currentLink?.key : 0);
 
   return (
       <Stack direction="column" spacing={2} className={classes.header}>
