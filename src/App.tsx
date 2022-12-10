@@ -9,6 +9,7 @@ import Navigation from "./components/directives/Navigation";
 import Home from "./components/pages/Home";
 import VarLetConst from "./components/pages/VarLetConst";
 import AccessingObjectProperties from "./components/pages/AccessingObjectProperties";
+import IfElseSwitch from "./components/pages/IfElseSwitch";
 import VariableTypes from "./components/pages/VariableTypes";
 import Arrays from "./components/pages/ArrayMethods";
 import SpreadRestDestructuring from "./components/pages/SpreadRestDestructuring";
@@ -41,6 +42,7 @@ function App() {
                   <Route path="/home" element={<Home />} />
                   <Route path="/var-let-const" element={<VarLetConst />} />
                   <Route path="/accessing-object-properties" element={<AccessingObjectProperties />} />
+                  <Route path="/if-else-switch" element={<IfElseSwitch />} />
                   <Route path="/variable-types" element={<VariableTypes />} />
                   <Route path="/arrays" element={<Arrays />} />
                   <Route path="/spread-rest-destructuring" element={<SpreadRestDestructuring />} />

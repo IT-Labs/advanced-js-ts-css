@@ -3,7 +3,7 @@ import picture from "../../assets/img/shallow_deep_copy.jpg";
 import Content from "../../models/Content";
 import Note from "../directives/Note";
 
-interface Person{
+interface IPerson{
   name: string;
   surname: string;
   address: {
@@ -19,7 +19,7 @@ const ShallowDeepCopy = () => {
   ]
   
   useEffect(() => {
-    let person1 = {
+    let person1: IPerson = {
       name: "John",
       surname: "Doe",
       address: {
