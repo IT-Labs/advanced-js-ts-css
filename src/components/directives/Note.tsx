@@ -9,10 +9,11 @@ const Note = (props: { header: any; content: any; notes: any; }) => {
   // const notes = props.notes;
 
   // {header: title, content, notes} -> for alias
+  // const title = props.header;
   
   return (
     <Grid item xs={3}>
-      <div className={classes.container}>
+      <div id={classes.container}>
         {!!header && <div className={classes.header}>{header}</div>}
         {!!content && <div className={classes.content}>{content}</div>}
         {!!notes &&

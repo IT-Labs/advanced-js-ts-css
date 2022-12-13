@@ -17,9 +17,10 @@ const UnionTypes = () => {
   // same as let someArray: Array<number|string> = [1, 2, 3];
   let someArray: (number | string)[] = [1, 2, 3];
   someArray.push('text');
+  console.log(someArray);
 
   let sortOrder: SortOrderType = 'Ascending';
-  sortOrder = "Descending";
+  sortOrder = 'Descending';
   console.log(typeof sortOrder);
 
   return (

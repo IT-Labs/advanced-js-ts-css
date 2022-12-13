@@ -29,26 +29,25 @@ const ArrayMethods = () => {
   let users: Array<User> = useMemo(() => [{id: 0, name: 'John Doe'}, {id: 1, name: 'Will Barrow'}, {id: 2, name: 'Guy Mann'}],[]);
   let userStatuses = useMemo(() => [{id: 5, isConfirmed: true}, {id: 1, isConfirmed: true}, {id: 3, isConfirmed: false}, {id: 0, isConfirmed: false}, {id: 2, isConfirmed: false}],[]);
 
-  const checkUserStatusOld = useCallback(() => {
-    for(let i = 0; i < users.length; i++){
-      for(let j = 0; j < userStatuses.length; j++) {
-        users[i].id === userStatuses[j].id && (users[i].isConfirmed = userStatuses[j].isConfirmed); 
-      }  
-    }
+  const checkUserStatus = useCallback(() => {
+    // for(let i = 0; i < users.length; i++){
+    //   for(let j = 0; j < userStatuses.length; j++) {
+    //     users[i].id === userStatuses[j].id && (users[i].isConfirmed = userStatuses[j].isConfirmed); 
+    //   }  
+    // }
+
+    users.forEach((user) => {
+      userStatuses.forEach((userStatus) => {
+        user.id === userStatus.id && (user.isConfirmed = userStatus.isConfirmed); 
+      })
+    })
+
   },[users, userStatuses]);
 
-  // const checkUserStatus = useCallback(() => {
-  //   users.forEach((user) => {
-  //     userStatuses.forEach((userStatus) => {
-  //       user.id === userStatus.id && (user.isConfirmed = userStatus.isConfirmed); 
-  //     })
-  //   })
-  // },[users, userStatuses]);
-
   useEffect(() => {
-    checkUserStatusOld();
+    checkUserStatus();
     console.log(users);
-  },[checkUserStatusOld, users])
+  },[checkUserStatus, users])
 
 
   return (

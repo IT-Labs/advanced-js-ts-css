@@ -2,12 +2,14 @@
   background-color: coral;
   /* height: 50px;
   width: 300px; */
+  /* we can add width and height but the element with a display block will reserve the entire width. */
 }
 
 .span1 {
   background-color: cornflowerblue;
   width: 300px;
   /* width and height are ignored for display: inline */
+  /* display inline take minimum amount of space possible */
 }
 
 .span2 {
@@ -21,6 +23,7 @@
   display: inline-block;
   height: 50px;
   width: 300px;
+  /* on inline-block elements we can set width and height properties */
 }
 
 .spanNone {

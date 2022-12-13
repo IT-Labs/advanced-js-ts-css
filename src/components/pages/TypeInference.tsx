@@ -24,9 +24,9 @@ const TypeInference = () => {
   }
 
   let javaScriptLikeVar: any = 5;
-  console.log('javaScriptLikeVar before change: ', javaScriptLikeVar);
+  console.log(`javaScriptLikeVar before change: ${javaScriptLikeVar}, of type: ${typeof javaScriptLikeVar}`);
   javaScriptLikeVar = 'some text';
-  console.log('javaScriptLikeVar after change: ', javaScriptLikeVar);
+  console.log(`javaScriptLikeVar after change: ${javaScriptLikeVar}, of type: ${typeof javaScriptLikeVar}`);
 
   useEffect(() => {
     someArray.push('new text');

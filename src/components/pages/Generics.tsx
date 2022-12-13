@@ -21,6 +21,7 @@ const Generics = () => {
       ArrayOfT.push(element);
     })
     return ArrayOfT;
+    // return args;
   }
 
   useEffect(() => {

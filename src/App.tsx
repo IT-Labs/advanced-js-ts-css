@@ -21,6 +21,7 @@ import TypeAssertions from "./components/pages/TypeAssertions";
 import UnionTypes from "./components/pages/UnionTypes";
 import Generics from "./components/pages/Generics";
 import CssSelectors from "./components/pages/CssSelectors";
+import CssSelectorsExamples from './components/pages/CssSelectorsExamples';
 import CssPosition from "./components/pages/CssPosition";
 import CssPositionExamples from "./components/pages/CssPositionExamples";
 import CssDisplay from "./components/pages/CssDisplay";
@@ -54,6 +55,7 @@ function App() {
                   <Route path="/union-types" element={<UnionTypes />} />
                   <Route path="/generics" element={<Generics />} />
                   <Route path="/css-selectors" element={<CssSelectors />} />
+                  <Route path="/css-selectors-examples" element={<CssSelectorsExamples />} />
                   <Route path="/css-position" element={<CssPosition />} />
                   <Route path="/css-position-examples" element={<CssPositionExamples />} />
                   <Route path="/css-display" element={<CssDisplay />} />

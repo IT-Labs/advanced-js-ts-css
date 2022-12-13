@@ -7,7 +7,7 @@ const CssDisplayExamples = () => {
   return (
     <React.Fragment>
       <Grid item xs={12}>
-        <div className={classes['default-div']}>This is a div (default display is block)</div>
+        <div className={classes['default-div']}>This is a div (default display is block. It starts on a new line, and takes up the whole width)</div>
         <span className={classes.span1}>This is a span (default display is inline)</span>
         <span className={classes.span2}>This is a span2 (default display is inline)</span>
         <span className={classes.span3}>This is a span3 (display: inline-block)</span>

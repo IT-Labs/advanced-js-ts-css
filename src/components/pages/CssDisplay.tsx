@@ -12,11 +12,12 @@ const CssDisplay = () => {
     {key: 1, question: 'Default display property', answer: 'Different default display property for different HTML elements.'},
     {key: 2, question: 'Default display property for some HTML elements', notes: [
       {key: 0, content: 'for <div> is block' },
-      {key: 1, content: 'for <span> is inline' },
-      {key: 2, content: 'for <head> is none' },
-      {key: 3, content: 'for <h1> - <h6> is block' },
-      {key: 4, content: 'for <footer> is block' },
-      {key: 5, content: 'for <img> is inline-block' },
+      {key: 1, content: 'for <p> is block' },
+      {key: 2, content: 'for <h1> - <h6> is block' },
+      {key: 3, content: 'for <footer> is block' },
+      {key: 4, content: 'for <span> is inline' },
+      {key: 5, content: 'for <head> is none' },
+      {key: 6, content: 'for <img> is inline-block' },
     ]},
   ]
 

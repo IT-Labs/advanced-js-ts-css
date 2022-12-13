@@ -13,14 +13,15 @@ const TypeAssertions = () => {
     {key: 3, question: 'TypeScript assertion and React JSX', answer: "Only the 'as' syntax is allowed, because JSX is emendable in XML like a syntax. And since XML uses angular brackets, it creates a conflict while using type assertions with angular brackets in JSX."},
   ]
 
-  let someNumber: any;
-  someNumber = "12345";
-  let numberOfChars = (someNumber as string).length;
+  let someString: any;
+  someString = "12345";
+  let numberOfChars = someString.length;
+  numberOfChars = (someString as string).length;
   // type assertion does not change the type of the variable, 
   // it is used to inform the TypeScript compiler about the type of the variable so we can access the intellisense.
 
   // template literals syntax: `some text ${expression} other text`
-  console.log(`Number of chars in ${someNumber} is ${numberOfChars}`);
+  console.log(`Number of chars in ${someString} is ${numberOfChars}`);
 
   return (
     <React.Fragment>
